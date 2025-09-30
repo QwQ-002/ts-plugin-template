@@ -1,0 +1,35 @@
+{
+  "$schema": "https://raw.githubusercontent.com/QwQ-002/types/main/plugin.schema.json",
+  "name": "ts_plugin_template",
+  "version": "1.0.0",
+  "description": "快速构建通用插件",
+  "type": "commonjs",
+  "qwqnt": {
+    "name": "通用插件模板",
+    "settings": "ts_plugin_template",
+    "inject": {
+      "renderer": "./dist/renderer/index.qwq.js",
+      "preload": "./dist/preload/index.js"
+    },
+    "dependencies": {
+      "qwqnt-plugin_settings": "^1.2.5"
+    }
+  },
+  "author": "xiyuesaves",
+  "license": "AGPL-3.0-only",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "build": "ts-node -P ./tsconfig.json scripts/build.ts",
+    "dev": "ts-node -P ./tsconfig.json scripts/build.ts --watch"
+  },
+  "keywords": [],
+  "packageManager": "pnpm@10.16.0",
+  "devDependencies": {
+    "@qwqnt/types": "github:QwQ-002/types",
+    "@types/node": "20.11.20",
+    "electron": "^37.2.5",
+    "esbuild": "^0.25.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}

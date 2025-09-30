@@ -1,0 +1,26 @@
+{
+  "manifest_version": 4,
+  "type": "extension",
+  "name": "通用插件模板",
+  "slug": "ts_plugin_template",
+  "description": "快速构建通用插件",
+  "version": "1.0.0",
+  "icon": "./icon.png",
+  "authors": [
+    {
+      "name": "曦月",
+      "link": "https://github.com/xiyuesaves"
+    }
+  ],
+  "platform": ["win32", "linux", "darwin"],
+  "dependencies": [],
+  "injects": {
+    "renderer": "./dist/renderer/index.ll.js",
+    "main": "./dist/main/index.js",
+    "preload": "./dist/preload/index.js"
+  },
+  "repository": {
+    "repo": "xiyuesaves/ts-plugin-template",
+    "branch": "main"
+  }
+}
